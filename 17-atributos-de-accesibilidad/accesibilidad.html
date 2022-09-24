@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accesibilidad</title>
+</head>
+<body>
+    <!-- 
+
+        La accesibilidad en la web es algo que daría para un curso entero pero vamos a tener una pequeña introducción sobre lo que es, para qué sirve, saber dónde buscar y conocer las bases de la accesibilidad.
+
+        La accesibilidad consiste en hacer una web que sea accesible para todo el mundo independientemente de si pueden verla o no. Esto está diseñado para navegadores de terminal o navegadores que leen la web y la dictan esto está pensado para personas invidentes que visiten nuestra web y tengan un navegador por voz que le vaya indicando donde están y les vayan indicando por qué punto se están moviendo por nuestra web.
+
+    -->
+    <h1>Accesibilidad</h1>
+    <!-- 
+        El atributo tabindex nos permite marcar el foco usando el tab siguiendo un orden que le indiquemos suele venir bien en formularios o artículos de noticias.
+    -->
+    <p tabindex="1">Parrafo 1</p>
+    <p tabindex="2">Parrafo 2</p>
+    <p tabindex="3">Parrafo 3</p>
+
+    <!-- 
+        arial-label lo que hace es que cuando un asistente de voz lea algo de nuestra web seguidamente leerá 
+        el texto que le indiquemos.
+
+        El atributo role nos indica información sobre qué tipo de elemento tenemos el foco (si es un checkbox, 
+        radiobutton, párrafo etc).
+    -->
+    <a href="#" role="link" aria-label="Leer más sobre la noticia del agua en marte">leer más</a>
+</body>
+</html>

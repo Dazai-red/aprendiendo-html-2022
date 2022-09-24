@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Envio mediante GET y POST</title>
+</head>
+<body>
+    <!--
+        El archivo envio.html no existe y nos va a dar error.
+        El metodo por defecto es GET. Es el metodo que se ejecuta cuando nosotros entramos a una página a traves de la url,
+        cuando le pulsamos en enviar podemos ver en la url enviar.html?
+        Por otro lado tenemos el metodo POST. Este metodo es el envio de formulario a traves de la parte de atras (servidor), nos da un error 405 cuando el archivo no existe, en la url no aparece enviar.html? aparece enviar.html. Esto significa que ha intentado enviar la información pero la información no ha llegado porque no ha encontrado el archivo para enviarle la información.
+
+        Con el metodo GET al darle a enviar se puede ver en la url despues de la interrogación los campos que se estan enviando por esto mismo
+        el atributo name es obligatorio porque si no lo utilizamos no estamos enviando nada. 
+    -->
+    <form action="envio.html" method="post">
+        <label for="name">Nombre</label>
+        <input type="text" id="name" name="name">
+        <label for="surname">Apellido</label>
+        <input type="text" id="surname" name="surname">
+        <input type="submit">
+    </form>
+</body>
+</html>

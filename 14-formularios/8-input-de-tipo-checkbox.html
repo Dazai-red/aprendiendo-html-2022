@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inputs de tipo checkbox</title>
+</head>
+<body>
+    <!-- 
+
+        checkbox -> Permite seleccionar varias opciones de una lista de opciones relacionadas.
+
+        Al igual que los de tipo radio tiene el atributo obligatorio value, name y checked con la diferencia de que puede haber varias opciones marcadas como checked.
+    
+    -->
+    <h1>Elementos seleccionables</h1>
+    <form>
+        <h2>Lenguajes que conoces</h2>
+        <label>
+            <!-- la forma de invertir nombre de la casilla es esta: -->
+            <input type="checkbox" name="languages" value="html" checked>
+            HTML
+        </label>
+        <label>
+            <input type="checkbox" name="languages" value="css" checked>
+            CSS
+        </label>
+        <label>
+            <input type="checkbox" name="languages" value="javascript">
+            JavaScript
+        </label>
+    </form>
+</body>
+</html>

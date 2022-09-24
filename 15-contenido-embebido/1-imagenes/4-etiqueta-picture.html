@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etiqueta picture</title>
+    <!-- Estilos para cambiar el tamaño de la imágenes -->
+    <style>
+        img {
+            max-width: 100%;
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Etiqueta picture</h1>
+    <!-- 
+         
+        Es similar a srceset pero con más funcionalidades dentro de la etiqueta picture tenemos que meter la etiqueta source con el atributo srcset dentro meteremos cada una de las rutas donde se encuentran nuestras imágenes que queramos mostrar.
+
+        Al hacer esto no se mostrará nada porque tenemos que indicar una copia de seguridad obligatoria dentro de la etiqueta picture pondremos la etiqueta img con el atributo src dentro de src indicaremos la ruta de la imágen que actuará como copia de seguridad.
+
+
+    -->
+    <picture>
+        <source srcset="/15-contenido-embebido/imagenes/assets/images/panda.webp,
+        /15-contenido-embebido/imagenes/assets/images/panda.jpg,
+        /15-contenido-embebido/imagenes/assets/images/panda-mobile.webp 2x,
+        /15-contenido-embebido/imagenes/assets/images/panda-mobile.webp 2x">
+        <img src="/15-contenido-embebido/imagenes/assets/images/panda.jpg" alt="panda">
+    </picture>
+    <!-- 
+
+        Podemos añadir el atributo media="()" para indicar el ancho con el que queremos mostrar la imágen
+        min-width:1200px 
+        max-width:1200px
+
+        también se pueden usar las medidas de 2x 3x como en srcset de img
+
+    -->
+    <picture>
+        <source srcset="/15-contenido-embebido/imagenes/assets/images/panda.webp,
+        /15-contenido-embebido/imagenes/assets/images/panda.jpg"
+        media="(max-width:1200px)">
+        
+        <img src="/15-contenido-embebido/imagenes/assets/images/panda.jpg" alt="panda">
+    </picture>
+
+    <!-- 
+        
+        Como norma general se suele usar más picture antes que img con el atributo srcset porque nos permite tener más posibilidades pero en algunos casos no estará soportado por según que versión del navegador están utilizando los clientes y estaremos forzados a utilizar img 
+    
+    -->
+
+</body>
+</html>

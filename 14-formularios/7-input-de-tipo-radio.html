@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seleccionar opciones</title>
+</head>
+<body>
+    <!-- 
+
+        radio -> Permite seleccionar una única opción de una lista de opciones relacionadas.
+
+        El atributo value es obligatorio e indica el valor que se va a mandar al servidor. el valor no tiene porque corresponder con el label pero si es recomendable que sea identificativo. 
+
+        En los radio indicaremos con el atributo name el mismo nombre para todos los de un mismo grupo y con el atributo checked indicaremos una opción por defecto marcada.
+
+        En este ejemplo lo que va a recibir el servidor es gender y el valor masculino para saber a qué categoría pertenece y que valor ha elegido el usuario.
+
+    -->
+    <!-- en el caso de hacer un seleccionador de sexo no tiene mucho sentido marcar una opción marcada por defecto, se suele usar en por ejemplo si desea recibir más noticias al email  -->
+    <h1>Elementos seleccionables</h1>
+    <form>
+        <h2>Género</h2>
+        <label>Masculino
+            <input type="radio" name="gender" value="masculino" checked>
+        </label>
+        <label>Femenino
+            <input type="radio" name="gender" value="femenino">
+        </label>
+        <label>Desconocido
+            <input type="radio" name="gender" value="desconocido">
+        </label>
+    </form>
+</body>
+</html>

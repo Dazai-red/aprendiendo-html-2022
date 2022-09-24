@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipos de inputs y diferencia entre type button y button</title>
+</head>
+<body>
+
+    <!-- 
+
+        input type:
+            button -> Se comporta igual que un botón.
+            color -> se utiliza para especificar un color.
+            date -> se utiliza para introducir una fecha
+            datetime -> obsoleto
+            datetime-local -> fecha y hora, no funciona en firefox
+            email -> se utiliza para introducir un email
+            hidden -> campo oculto, puede contener valor pero no se mostrará
+            month -> se utiliza para introducir un mes
+            number -> Se utiliza para valores numéricos
+            password -> se utiliza para introducir contraseñas
+            range -> se utiliza para establecer un rango
+            reset-> se utiliza para resetear el formulario
+            search -> se utiliza para las barras de búsqueda
+            submit-> se utiliza para enviar un formulario
+            tel-> se utiliza para introducir números de teléfono
+            text-> valor por defecto
+            time-> se utiliza para introducir una hora
+            url-> se utiliza para introducir urls
+            week -> se utiliza para introducir el número de semana del año.
+
+    -->
+
+    <form>
+        <label for="nombre">nombre:</label>
+        <input type="text" id="nombre">
+        <input type="button" value="hace cosas con JavaScript">
+        <input type="submit" value="Enviar formulario con un input type">
+        <button>Enviar formulario</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inputs para fechas</title>
+</head>
+<body>
+    <!-- 
+
+        inputs de fecha:
+            date -> se utiliza para introducir una fecha
+            datetime -> obsoleto
+            datetime-local -> fecha y hora, no funciona en firefox.
+            month -> se utiliza para introducir un mes
+            time-> se utiliza para introducir una hora
+            week -> se utiliza para introducir el número de semana del año.
+        truco:
+            *Se recomienda usar date y time para seleccionar fecha y hora por separado antes que usar datetime-local por compatibiliad en firefox
+
+            hidden -> campo oculto, puede contener valor pero no se mostrará con el atributo value.
+
+
+    -->
+    <form>
+
+        <input type="date">
+        <!-- datetime-local no esta disponible en firefox por lo que no es recomendable su uso -->
+        <input type="datetime-local">
+         <!--si queremos podemos pedir la fecha y la hora por separado  -->
+        <input type="date">
+        <input type="time">
+        <input type="month">
+        <input type="week">
+
+    </form>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+</head>
+<body>
+
+    <!-- 
+        
+        Rutas absolutas: tienen un protocolo (http o https) y son únicas en la red, se utilizan para rutas externas en algún caso puntual pueden usarse para rutas internas pero es muy muy raro.
+
+        rutas relativas: pueden ser relativas al punto donde nos encontramos o relativas a la raíz del proyecto. No usan protocolo. Si el recurso se encuentra al mismo nivel (en la misma carpeta) pondremos únicamente el nombre del archivo.
+
+        Si necesitamos salir de la carpeta actual usaremos ../ y  se pone uno por cada nivel (carpeta) de la que queremos salir.
+
+        Es muy importante usar rutas relativas a la raíz. Nunca usar rutas absolutas ya que cuando subimos una web al servidor no las va a interpretar.
+
+    -->
+
+    <h1>Inicio del sitio</h1>
+    <a href="/paginas/contacto.html">Ir a contacto</a> <!-- ruta relativa al punto donde nos encontramos -->
+    <a href="https://www.google.com/">Ir a google</a> <!-- ruta absolutas -->
+    <a href="otro.html">Ir a otro</a>
+
+</body>
+</html>

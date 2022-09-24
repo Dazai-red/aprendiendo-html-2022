@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atributos formularios</title>
+</head>
+<body>
+    <!-- 
+
+        placeholder -> Da una pista de lo que el usuario tiene que introducir.
+        required -> Hace que un campo sea obligatorio.
+        readonly -> Hace que un campo sea de sólo lectura (este campo si se manda al servidor al enviar el formulario).
+        disabled -> Desactiva el campo, no se podra escribir en el. (no se manda al servidor).
+        min - max -> Establece el mínimo y máximo de un campo numérico.
+        minlenght - maxlenght -> Establece el mínimo y máximo de caracteres de un campo de texto.
+        selected -> Equivale a checked en los select, sirve para establecer una opción por defecto.
+        autofocus -> Para poner el foco por defecto al cargar el formulario.
+
+        pattern -> El atributo pattern, solamente se puede utilizar en el elemento input. Nos permite definir nuestras propias reglas para validar el valor de entrada usando expresiones regulares.
+
+        https://webdesign.tutsplus.com/es/tutorials/html5-form-validation-with-the-pattern-attribute--cms-25145
+
+        Existen más atributos que podemos consultar en este enlace: https://www.eniun.com/etiquetas-formularios-html5/
+
+    -->
+
+    <form>
+        <input type="text" placeholder="Introduce tu nombre" required>
+        <input type="text" value="Hola" readonly>
+        <input type="text" value="Hola" disabled>
+        <select name="numbers">
+            <option value="one">One</option>
+            <option value="two">Two</option>
+        </select>
+        <input type="number" min="5" max="10">
+        <input type="text" minlength="3" maxlength="5" required>
+        <input type="submit">
+    </form>
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atributo srcset</title>
+    <!-- Estilos para cambiar el tamaño de la imágenes -->
+    <style>
+        img {
+            max-width: 100%;
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Haciendo uso del atributo srcset</h1>
+    <!-- 
+         
+        Seguido de la etiqueta img podemos añadir el atributo srcset que sirve para indicar al navegador que cargue una de varías imágenes en función del DPR (device pixel ratio) o en función de si soporta la extensión de la imágen.
+
+        Para indicar en función del DPR cargue una imágen u otra le indicaremos seguida de la ruta de la imágen 3x por ejemplo para que se cargue en un DPR de 3 (este dpr es de móvil) haciendo zoom con el navegador hasta 300% simulamos que estamos en un DPR de 3 por lo que se cargará la imágen 
+
+        En el menú contextual pulsamos en inspeccionar elementos en la pestaña de network podemos ver el nombre, tamaño de los contenidos descargados de una web y el tiempo de transferencia.
+        
+        De todos los puntos donde podamos quitar contenido y peso a la web todo eso va a ayudar a que la carga de la web sea menor y cargue más rápido estando el contenido más optimizado.
+
+        Existen navegadores como Internet explorer que no soportan el formato webp para estos casos indicaremos el atributo src con la imágen en formato jpg ya que el navegador no soporta tampoco el atributo srcset.
+
+     -->
+    <img srcset="
+    /15-contenido-embebido/imagenes/assets/images/panda.webp,
+    /15-contenido-embebido/imagenes/assets/images/panda.jpg,
+    /15-contenido-embebido/imagenes/assets/images/panda-mobile.webp 2x,
+    /15-contenido-embebido/imagenes/assets/images/panda-mobile.webp 2x"
+    src="/15-contenido-embebido/imagenes/assets/images/panda.jpg"
+    alt="Panda de pana">
+
+</body>
+</html>

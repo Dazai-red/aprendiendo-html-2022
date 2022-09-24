@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elementos de línea</title>
+</head>
+<body>
+    <h1>Elementos de línea</h1>
+    <!-- 
+        em -> emphasis
+        strong -> más enfasis
+        small -> representar comentarios laterales y letra pequeña, incluyendo derechos de autor y texto legal, independientemente de su estilo de presentación.
+        br -> forzar un salto de línea
+        wbr -> salto de línea si hiciera falta
+        time -> se usa para representar un contenido de fecha y hora
+        i -> italic 
+        b -> bold
+        u -> underline
+        sup -> superíndice
+        sub -> subíndice
+    -->
+    <h2>Ejemplo con la etiqueta em</h2>
+    <p><em>El dinero </em>es importante pero la salud es lo más importante</p>
+    <!-- Digamos que si ordenaramos este parrafo por números el dinero valdría 1 yel resto del parrafo valdría 0 -->
+    <h2>Ejemplo con la etiqueta strong</h2>
+    <p><em>El dinero </em>es importante pero <strong>la salud </strong>es lo más importante</p>
+    <!-- strong valdría 2, em valdría 1 y el resto del parrafo 0 siendo 2 lo más importante del texto -->
+    <h2>Ejemplo con la etiqueta small</h2>
+    <p><em>El dinero </em>es importante pero <strong>la salud </strong>es lo más importante <small>saludos!</small>
+    </p>
+    <!-- small valdría -1 el resto del texto 0 em valdría 1 y strong valdría 2 -->
+    <h2>Ejemplo con br</h2>
+    <p>Lorem ipsum dolor sit <br> amet consectetur adipisicing elit. Culpa ut consequatur voluptatem numquam dolorem? Similique, nisi consequuntur ex laboriosam aliquam, quos sunt culpa cupiditate non, architecto doloribus accusamus. Tempore, magni.</p>
+    <!-- El texto del parrafo se rompera con forme tenga espacio para colocarse (esto depende de nuestro monitor o de como redimensionemos la ventana del navegador) para forzar un salto de línea utilizamos la etiqueta <br> esta etiqueta es solo de abrir no tiene cierre </br> -->
+    <!-- Los br se utilizan en casos donde sea realmente necesario los saltos de línea como un poema, una dirección etc -->
+    <!-- algo que no se debe hacer nunca es ir poniendo br a lo loco para dar espacio entre dos elementos esto es algo estetico y de esto se encarga CSS, no se debe de hacer jamas -->
+    <h2>Ejemplo con wbr</h2>
+    <p>http://127.0.0.1:5500/<wbr>5-elementos-bloque-y-linea/<wbr>elementos-de-linea.html</p>
+    <p>http://127.0.0.1:5500/<wbr>5_elementos_bloque_y_linea/<wbr>elementos_de_linea.html</p>
+    <!-- De normal no vas a encontrar ninguna palabra que corte toda la página pero con las URLs nos puede interesar que corte en puntos concretos   -->
+    <!-- nota importante: los navegadores interprentan las baras - como wbr por eso rompen en estos casos. -->
+    <h2>Ejemplo con time</h2>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Excepturi impedit assumenda reprehenderit at ullam, aspernatur hic atque rerum, aperiam earum vel aliquid enim saepe. Repellendus cumque repellat reiciendis sit ducimus?</p>
+    <!-- time sirve parra representar fecha y hora, fecha sola y hora sola. -->
+    <time>24/10/2020 10:35</time><br>
+    <time>24/10/2020</time>
+    <br>
+    <time>10:35</time>
+    <h2>Etiquetas para dar estilo</h2>
+    <p>
+        <i>Italic</i>
+        <b>Bold</b>
+        <u>Underline</u>
+    </p>
+    <!-- Estas etiquetas aparecieron en los inicios de HTML y se siguen manteniendo a día de hoy -->
+    <!-- a excepción de la etiqueta i que se utiliza para hacer uso de librerias de iconos un ejemplo fontawesome si miramos iconos veremos que vienen representandos en etiquetas de i-->
+    <h2>Escribir superíndices y subíndices </h2>
+    <p>4 elevado al cuadrado se representa así: 4<sup>2</sup></p>
+    <p>Agua oxigenada tiene la formula: H<sub>2</sub>O<sub>2</sub></p>
+</body>
+</html>

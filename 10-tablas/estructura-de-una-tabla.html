@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estructura de una tabla en HTML</title>
+    <style>
+        /* td {background-color: steelblue;} */
+        /* Para ver el funcionamiento de los col y span */
+        /* col:nth-child(1) {background-color: lightcoral;}
+        col:nth-child(2) {background-color: steelblue;} */
+        /* Estilos para tablas (no es la forma 100% correcta pero siempre será mejor que darle estilos dentro de HTML) */
+        
+        h1{
+            text-align: center;
+        }
+
+        table {
+            font-family: sans-serif;
+            border: 2px solid grey;
+            border-collapse: collapse;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        caption{
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            margin-top: 1rem;
+        }
+
+        th,td{
+            border: 2px solid grey;
+            padding: .5rem;
+        }
+
+        td:first-child,th,tfoot{
+            background-color: lightgreen;
+        }
+
+        .LCONF{
+            background-color: brown;
+        }
+
+        .ASG{
+            background-color: palevioletred;
+        }
+
+        .SAD{
+            background-color: orange;
+        }
+
+        .RECREO{
+            background-color: black;
+            color: white;
+        }
+
+        .ASO{
+            background-color: orangered;
+        }
+
+        .IAW{
+            background-color: purple;
+        }
+
+        .EIE{
+            background-color: greenyellow;
+        }
+
+        .SRI{
+            background-color: blue;
+        }
+
+        .horario td{
+            padding: 1rem;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Estructura de una tabla en HTML</h1>
+    <!-- 
+
+        Tablas
+
+        Las tablas en HTML sirven para mostrar contenido tabulado.La estructura básica de una tabla se compone de: 
+        tabla -> etiqueta que encierra una tabla 
+        tr-> table row, etiqueta que construye una fila 
+        td-> table data, etiqueta que construye una celda 
+
+        Truco: el número de celdas dentro de un td establecerá el número de columnas de la tabla.
+
+        Los títulos de las tablas se establecen con la etiqueta caption, es una etiqueta opcional, y según la especificación esa etiqueta se coloca justo después de la etiqueta table
+
+        Las cabeceras de las tablas se establecen con la etiqueta thead.
+        Dentro tendremos una etiqueta tr normal, pero en el caso de las celdas, las estableceremos con la etiqueta th en lugar de td.
+
+        El contenido de la tabla debe ir dentro de una etiqueta tbody para representar el cuerpo de la tabla (solo es necesario un tbody cuando tengamos un thead en la tabla).
+
+        de forma opcional podemos colocar un tfoot a la tabla para establecer un pie de tabla, esto es algo que algunas tablas tienen como suma de cantidades o total.
+
+        Atributos de las tablas
+
+        Para hacer que las celdas ocupen más de una fila o más de una columna tenemos 2 atributos: 
+
+        rowspan: sirve para que una celda ocupe más de una fila, el valor por defecto es 1
+        colspan: sirve para que una celda ocupa más de una columna, el valor por defecto es 1
+
+        Seleccionar columnas de las tablas
+        
+        Cuando necesitamos seleccionar una columna, tenemos la etiqueta colgroup, que nos permite seleccionar una columna en concreto. Dentro pondremos tantas etiquetas col como columnas tengamos, cada etiqueta col equivaldrá a una columna siguiendo el mismo orden que tienen en la tabla.
+
+        Si necesitamos que una etiqueta col agrupe más de una columna, tenemos el atributo span, que funciona exactamente igual que rowspan y colspan.
+
+    -->
+    <!-- Para dar estilos a una tabla nunca utilizar etiquetas obsoletas o atributos obsoletos como border="1" o <center></center> son etiquetas que estan obsoletas y es muy mala practica utilizarlas -->
+    <table>
+        <caption>Asignaturas y profesores</caption>
+        <tr>
+            <td>Administración de sistemas operativos (ASO)</td>
+            <td>Rosalía</td>
+        </tr>
+        <tr>
+            <td>Servicios de red e Internet(SRI)</td>
+            <td>Paco</td>
+        </tr>
+        <tr>
+            <td>Libre configuración (L.Conf)</td>
+            <td>Rosalía (profesora principal) y Pedro</td>
+        </tr>
+        <tr>
+            <td>Implantación de aplicaciones web (IAW)</td>
+            <td>Pedro</td>
+        </tr>
+        <tr>
+            <td>Empresa e iniciativa emprendedora (EIE)</td>
+            <td>Araceli</td>
+        </tr>
+        <tr>
+            <td>Seguridad y alta disponibilidad (SAD)</td>
+            <td>Pedro</td>
+        </tr>
+        <tr>
+            <td>Administración de sistemas gestores de bases de datos (AGBD)</td>
+            <td>Paco</td>
+        </tr>
+    </table>
+    <table class="horario">
+        <caption>Horario de clase</caption>
+        <colgroup>
+            <col span="5">  <!-- primera columna-->
+            <col>  <!-- segunda columna-->
+            <col>  <!-- tercera columna-->
+            <col>  <!-- ... -->
+            <col>
+            <col>
+        </colgroup>
+        <thead>
+            <tr>
+                <th></th>
+                <th>L</th>
+                <th>M</th>
+                <th>X</th>
+                <th>J</th>
+                <th>V</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>8:30-9:30</td>
+                <td rowspan="3" class="ASG">ASG</td>
+                <td rowspan="3" class="ASO">ASO</td>
+                <td class="IAW">IAW</td>
+                <td rowspan="3" class="ASO">ASO</td>
+                <td rowspan="3" class="SAD">SAD</td>
+            </tr>
+            <tr>
+                <td>9:30-10:30</td>
+                <td rowspan="2" class="EIE">EIE</td>
+            </tr>
+            <tr>
+                <td>10:30-11:30</td>
+            </tr>
+            <tr>
+                <td>11:30</td>
+                <td class="LCONF">L.Conf</td>
+                <td class="LCONF">L.Conf</td>
+                <td class="SRI">SRI</td>
+                <td class="IAW">IAW</td>
+                <td class="SRI">SRI</td>
+            </tr>
+            <tr>
+                <td>12:30-13:00</td>
+                <td colspan="5" class="RECREO">RECREO</td>
+            </tr>
+            <tr>
+                <td>13:00-14:00</td>
+                <td class="LCONF">L.Conf</td>  
+                <td rowspan="2" class="EIE">EIE</td>
+                <td rowspan="2" class="SRI">SRI</td>
+                <td rowspan="2" class="IAW">IAW</td>
+                <td rowspan="2" class="SRI">SRI</td>      
+            </tr>
+            <tr>
+                <td>14:00-15:00</td>
+                <td class="SAD">SAD</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan=5>Total de asignaturas:</td>
+                <td>7</td>
+            </tr>
+        </tfoot>
+    </table>
+    
+    
+</body>
+</html>

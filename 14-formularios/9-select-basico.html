@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>etiqueta select</title>
+</head>
+<body>
+    <!-- 
+
+        select -> Crea una lista de opciones donde podemos seleccionar una o varias opciones.
+
+        Cada opción irá dentro de una etiqueta <option> </option>
+
+        Si tenemos muchas opciones podemos ordenarlas por categorías a través de la etiqueta <optgroup> con el atributo label para nombrar la categoría.
+
+        Si quisiéramos elegir varios elementos utilizando la tecla ctrl tendriamos que indicarle a la etiqueta select el atributo multiple y de esta forma en vez de ser un desplegable tendremos una lista que nos permite seleccionar varias opciones con ctrl y el puntero del ratón. 
+
+
+    -->
+    <h1>Elementos seleccionables</h1>
+    <form>
+        <select name="lenguajes" multiple>
+            <option value="html">HTML</option>
+            <option value="css">CSS</option>
+            <option value="javascript">JavaScript</option>
+        </select>
+    </form>
+</body>
+</html>

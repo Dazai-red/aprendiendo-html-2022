@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>etiqueta select 2</title>
+</head>
+<body>
+    <!-- 
+
+        datalist -> es similar a los select pero con la posibilidad de escribir dentro de ellos para aplicar un filtro.
+
+        colocamos un input de tipo list y colocamos el atributo list igualado al id del datalist dentro del datalist tenemos options como en los selects con la diferencia que el value es lo que se muestra y envia y el contenido de la etiqueta es una descripción.
+
+    -->
+    <h1>Elementos seleccionables</h1>
+    <form>
+        <input type="list" list="pets">
+        <datalist id="pets">
+            <option value="perro">mamifero</option>
+            <option value="gato"></option>
+            <option value="hamster"></option>
+            <option value="conejo"></option>
+            <option value="loro"></option>
+            <option value="canario"></option>
+            <option value="serpiente"></option>
+            <option value="tarantula">un tipo de araña</option>
+        </datalist>
+    </form>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atributos de los enlaces</title>
+</head>
+<body>
+    <h1>Atributos de los enlaces</h1>
+    <!-- _blank abre el enlace en una nueva pestaña se suele poner en enlaces externos para evitar que los usuarios salgan de tu página -->
+    <a href="https://www.google.es/" target="_blank">Ir a google</a>
+    <!-- cuando no indicamos nada el valor es _self esto quiere decir que no habra una nueva pestaña-->
+    <a href="contacto.html">ir a contacto</a>
+    <a href="contacto.html" target="_self">ir a contacto</a>
+    <!-- download sirve para descargar recursos que se encuentren dentro de nuestro servidor, la estructura de directorios que tendremos en nuestro sitio web para recursos será assets y dentro una carpeta para cada tipo de recurso images video etc -->
+    <a href="/assets/images/gato.jpg" download>Descargar foto gato</a>
+    <!-- el atributo download no funciona en enlaces externos aquí una prueba -->
+    <a href="https://dam.ngenespanol.com/wp-content/uploads/2019/02/gato-dia-internacional.png" download>Descargar foto gato (no funciona porque es utiliza ruta externa)</a>
+    <!-- cuando no funciona download lo que ocurre es que funciona como un enlace normal y visita el recurso -->
+</body>
+</html>

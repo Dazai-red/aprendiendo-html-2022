@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Device Pixel Ratio</title>
+    <!-- Estilos para cambiar el tamaño de la imágenes -->
+    <style>
+        img {
+            max-width: 100%;
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Device pixel ratio</h1>
+    <!-- 
+        DPR es la relación que existe entre los píxeles reales que tiene el dispositivo y los píxeles que tenemos disponibles para “pintar”, dibujar, mostrar contenido.
+
+        DPR = píxeles reales / pixeles disponibles
+
+        Viewport es el espacio que tenemos disponible para dibujar.
+
+        La resolución de nuestro monitor es el número de píxeles totales que tiene disponibles pero estos no corresponden a lo que podemos mostrar en la web.
+
+        El DPR va en función del zoom que le demos al navegador si tenemos 200% de zoom significa que tenemos un DPR de 2 y así sucesivamente.
+
+        Dentro de What is my viewport podemos consultar cual es nuestro viewport, nuestro DPR y la resolución de la pantalla que estamos utilizando.
+
+        Es un error muy común utilizar las mismas imágenes tanto para escritorio como en teléfonos móviles
+
+        Nosotros podemos poner una imágen en 1080p dentro de nuestra página y representarla de forma que se vea bien en dispositivos móviles pero esto no es eficiente porque el peso de la misma es muy alto lo que se suele hacer es tener dos imágenes una para PC y otra para dispositivos móviles con una menor resolución. 
+        
+     -->
+    <img src="/15-contenido-embebido/imagenes/assets/images/panda.jpg" alt="Panda de pana">
+
+
+</body>
+</html>
